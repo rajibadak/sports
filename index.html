@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delta Sports Emporium</title>
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <!-- 1. Top Announcement & Contact Bar -->
+    <div class="top-bar">
+      <div class="header-container top-bar-container">
+        <!-- Desktop Contacts (Visible on screens > 768px) -->
+        <div class="top-bar-left">
+          <a href="https://wa.me/918637506933" target="_blank" rel="noopener noreferrer" class="contact-pill whatsapp-link">
+            <span class="icon-badge whatsapp-badge">
+              <i class="ri-whatsapp-fill"></i>
+            </span>
+            <span class="contact-value">8637506933</span>
+          </a>
+
+          <div class="contact-pill phone-block">
+            <span class="icon-badge phone-badge">
+              <i class="ri-phone-fill"></i>
+            </span>
+            <span class="contact-value phones-text">
+              <a href="tel:9732800416">9732800416</a>, <a href="tel:6294542448">6294542448</a>
+            </span>
+          </div>
+
+          <a href="mailto:deltaenterp@gmail.com" class="contact-pill email-link">
+            <span class="icon-badge email-badge">
+              <i class="ri-mail-fill"></i>
+            </span>
+            <span class="contact-value">deltaenterp@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Mobile Top Bar (Sleek single line on mobile <= 768px) -->
+        <div class="top-bar-mobile">
+          <a href="https://wa.me/918637506933" target="_blank" rel="noopener noreferrer" class="top-mobile-item whatsapp">
+            <i class="ri-whatsapp-fill"></i>
+            <span>8637506933</span>
+          </a>
+          <span class="top-mobile-dot">•</span>
+          <a href="tel:9732800416" class="top-mobile-item phone">
+            <i class="ri-phone-fill"></i>
+            <span>Call Support</span>
+          </a>
+        </div>
+
+        <!-- Desktop Quick Links & Socials (Visible on screens > 768px) -->
+        <div class="top-bar-right">
+          <div class="social-icons-group">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle facebook" aria-label="Facebook">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle instagram" aria-label="Instagram">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle youtube" aria-label="YouTube">
+              <i class="ri-youtube-fill"></i>
+            </a>
+          </div>
+
+          <div class="top-nav-links">
+            <a href="#about" class="quick-link">About Us</a>
+            <span class="pipe-separator">|</span>
+            <a href="#contact" class="quick-link">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Main Navigation Bar -->
+    <div class="main-header-row">
+      <div class="header-container main-nav-container">
+
+        <!-- Mobile Bar Top Row (Visible on screens <= 1200px) -->
+        <div class="mobile-navbar-row">
+          <a href="#" class="brand-logo mobile-logo" aria-label="Delta Sports Emporium Homepage">
+            <img src="assets/logo.png" alt="DELTA SPORTS EMPORIUM" class="logo-image">
+          </a>
+
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false">
+            <i class="ri-menu-line"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Logo (Visible on screens > 1200px) -->
+        <a href="#" class="brand-logo desktop-logo" aria-label="Delta Sports Emporium Homepage">
+          <img src="assets/logo.png" alt="DELTA SPORTS EMPORIUM" class="logo-image">
+        </a>
+
+        <!-- Off-Canvas Drawer Overlay -->
+        <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+        <!-- Primary Navigation (Desktop: Inline Bar / Mobile & Tablet: Drawer) -->
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary Navigation">
+          <!-- Drawer Header: Brand Logo on Left, Close Button on Far Right -->
+          <div class="drawer-header">
+            <a href="#" class="drawer-brand" aria-label="Delta Sports Home">
+              <img src="assets/logo.png" alt="Delta Sports" class="drawer-logo">
+            </a>
+            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+              <i class="ri-close-line"></i>
+            </button>
+          </div>
+
+          <!-- Navigation Menu Links -->
+          <ul class="nav-menu-list">
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link active">
+                <i class="ri-home-4-line drawer-nav-icon"></i>
+                <span class="link-label">Home</span>
+              </a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#all-products" class="nav-menu-link">
+                <i class="ri-shopping-bag-3-line drawer-nav-icon"></i>
+                <span class="link-label">All Products</span>
+              </a>
+            </li>
+            <li class="nav-menu-item dropdown-parent">
+              <a href="#categories" class="nav-menu-link" aria-haspopup="true">
+                <i class="ri-grid-line drawer-nav-icon"></i>
+                <span class="link-label">Categories</span>
+                <i class="ri-arrow-down-s-line chevron-arrow"></i>
+              </a>
+              <!-- Categories Dropdown Menu -->
+              <ul class="sub-menu">
+                <li><a href="#cricket"><i class="ri-arrow-right-s-line sub-icon"></i> Cricket Gear</a></li>
+                <li><a href="#football"><i class="ri-arrow-right-s-line sub-icon"></i> Football &amp; Boots</a></li>
+                <li><a href="#badminton"><i class="ri-arrow-right-s-line sub-icon"></i> Badminton &amp; Tennis</a></li>
+                <li><a href="#fitness"><i class="ri-arrow-right-s-line sub-icon"></i> Gym &amp; Fitness</a></li>
+                <li><a href="#skating"><i class="ri-arrow-right-s-line sub-icon"></i> Skating &amp; Scooters</a></li>
+                <li><a href="#accessories"><i class="ri-arrow-right-s-line sub-icon"></i> Sports Accessories</a></li>
+              </ul>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#brands" class="nav-menu-link">
+                <i class="ri-medal-line drawer-nav-icon"></i>
+                <span class="link-label">Brands</span>
+              </a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#offers" class="nav-menu-link offers-link">
+                <i class="ri-percent-line drawer-nav-icon"></i>
+                <span class="link-label">Offers</span>
+                <span class="hot-badge">HOT</span>
+              </a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#about" class="nav-menu-link">
+                <i class="ri-information-line drawer-nav-icon"></i>
+                <span class="link-label">About Us</span>
+              </a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#contact" class="nav-menu-link">
+                <i class="ri-customer-service-2-line drawer-nav-icon"></i>
+                <span class="link-label">Contact</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Drawer Footer Contact Details & Socials -->
+          <div class="drawer-footer">
+            <div class="drawer-contact-block">
+              <span class="drawer-section-heading">Customer Support</span>
+              <a href="https://wa.me/918637506933" target="_blank" rel="noopener noreferrer" class="drawer-contact-link whatsapp">
+                <i class="ri-whatsapp-fill"></i>
+                <span>+91 8637506933</span>
+              </a>
+              <a href="tel:9732800416" class="drawer-contact-link phone">
+                <i class="ri-phone-fill"></i>
+                <span>+91 9732800416 / 6294542448</span>
+              </a>
+              <a href="mailto:deltaenterp@gmail.com" class="drawer-contact-link email">
+                <i class="ri-mail-fill"></i>
+                <span>deltaenterp@gmail.com</span>
+              </a>
+            </div>
+
+            <div class="drawer-socials">
+              <span class="drawer-socials-label">Follow Us:</span>
+              <div class="social-icons-group">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle facebook" aria-label="Facebook">
+                  <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle instagram" aria-label="Instagram">
+                  <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle youtube" aria-label="YouTube">
+                  <i class="ri-youtube-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Search Box Container -->
+        <div class="header-search-wrap">
+          <form class="search-box" role="search" onsubmit="event.preventDefault();">
+            <span class="search-lead-icon">
+              <i class="ri-search-line"></i>
+            </span>
+            <input 
+              type="search" 
+              class="search-text-field" 
+              placeholder="Search for sports items, equipment..." 
+              aria-label="Search for sports items" 
+            />
+            <button type="submit" class="search-action-btn" aria-label="Search button">
+              <i class="ri-search-line"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <!-- Hero Banner Section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-banner">
+        <img
+          src="assets/heroBanner.png"
+          alt=""
+          class="hero-banner-image"
+          width="1983"
+          height="793"
+        />
+        <div class="hero-copy">
+          <p class="hero-kicker">Welcome to</p>
+          <h1 class="hero-title" id="hero-title">
+            <span class="hero-title-brand">Delta</span>
+            <span class="hero-title-name">Sports Emporium</span>
+          </h1>
+          <p class="hero-lead">All types of Sports items available here<br>on Wholesale &amp; Retail price</p>
+          <ul class="hero-points">
+            <li>
+              <span class="hero-point-icon" aria-hidden="true"><i class="ri-award-fill"></i></span>
+              <span>Wide Range of Products</span>
+            </li>
+            <li>
+              <span class="hero-point-icon" aria-hidden="true"><i class="ri-truck-fill"></i></span>
+              <span>Wholesale &amp; Retail</span>
+            </li>
+            <li>
+              <span class="hero-point-icon" aria-hidden="true"><i class="ri-shield-check-fill"></i></span>
+              <span>Quality Assurance</span>
+            </li>
+          </ul>
+          <a href="#all-products" class="hero-shop-btn">
+            Shop Now
+            <i class="ri-arrow-right-line" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- External JavaScript File -->
+  <script src="script.js" defer></script>
+</body>
+</html>
