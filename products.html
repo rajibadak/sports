@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Products | Delta Sports Emporium</title>
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,800&display=swap" rel="stylesheet">
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=49">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <!-- 1. Top Announcement & Contact Bar -->
+    <div class="top-bar">
+      <div class="header-container top-bar-container">
+        <!-- Desktop Contacts (Visible on screens > 768px) -->
+        <div class="top-bar-left">
+          <a href="https://wa.me/918637506933" target="_blank" rel="noopener noreferrer" class="contact-pill whatsapp-link">
+            <span class="icon-badge whatsapp-badge">
+              <i class="ri-whatsapp-fill"></i>
+            </span>
+            <span class="contact-value">8637506933</span>
+          </a>
+
+          <div class="contact-pill phone-block">
+            <span class="icon-badge phone-badge">
+              <i class="ri-phone-fill"></i>
+            </span>
+            <span class="contact-value phones-text">
+              <a href="tel:9732800416">9732800416</a>, <a href="tel:6294542448">6294542448</a>
+            </span>
+          </div>
+
+          <a href="mailto:deltaenterp@gmail.com" class="contact-pill email-link">
+            <span class="icon-badge email-badge">
+              <i class="ri-mail-fill"></i>
+            </span>
+            <span class="contact-value">deltaenterp@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Mobile Top Bar (Sleek single line on mobile <= 768px) -->
+        <div class="top-bar-mobile">
+          <a href="https://wa.me/918637506933" target="_blank" rel="noopener noreferrer" class="top-mobile-item whatsapp">
+            <i class="ri-whatsapp-fill"></i>
+            <span>8637506933</span>
+          </a>
+          <span class="top-mobile-dot">•</span>
+          <a href="tel:9732800416" class="top-mobile-item phone">
+            <i class="ri-phone-fill"></i>
+            <span>Call Support</span>
+          </a>
+        </div>
+
+        <!-- Desktop Quick Links & Socials (Visible on screens > 768px) -->
+        <div class="top-bar-right">
+          <div class="social-icons-group">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle facebook" aria-label="Facebook">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle instagram" aria-label="Instagram">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Main Navigation Bar -->
+    <div class="main-header-row">
+      <div class="header-container main-nav-container">
+
+        <!-- Mobile Bar Top Row (Visible on screens <= 1200px) -->
+        <div class="mobile-navbar-row">
+          <a href="index.html" class="brand-logo mobile-logo" aria-label="Delta Sports Emporium Homepage">
+            <img src="assets/logo.png" alt="DELTA SPORTS EMPORIUM" class="logo-image">
+          </a>
+
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false">
+            <i class="ri-menu-line"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Logo (Visible on screens > 1200px) -->
+        <a href="index.html" class="brand-logo desktop-logo" aria-label="Delta Sports Emporium Homepage">
+          <img src="assets/logo.png" alt="DELTA SPORTS EMPORIUM" class="logo-image">
+        </a>
+
+        <!-- Off-Canvas Drawer Overlay -->
+        <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+        <!-- Primary Navigation (Desktop: Inline Bar / Mobile & Tablet: Drawer) -->
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary Navigation">
+          <!-- Drawer Header: Brand Logo on Left, Close Button on Far Right -->
+          <div class="drawer-header">
+            <a href="index.html" class="drawer-brand" aria-label="Delta Sports Home">
+              <img src="assets/logo.png" alt="Delta Sports" class="drawer-logo">
+            </a>
+            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+              <i class="ri-close-line"></i>
+            </button>
+          </div>
+
+          <!-- Navigation Menu Links -->
+          <ul class="nav-menu-list">
+            <li class="nav-menu-item">
+              <a href="index.html" class="nav-menu-link">
+                <i class="ri-home-4-line drawer-nav-icon"></i>
+                <span class="link-label">Home</span>
+              </a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="products.html" class="nav-menu-link active">
+                <i class="ri-shopping-bag-3-line drawer-nav-icon"></i>
+                <span class="link-label">All Products</span>
+              </a>
+            </li>
+            <li class="nav-menu-item dropdown-parent">
+              <a href="index.html#categories" class="nav-menu-link" aria-haspopup="true">
+                <i class="ri-grid-line drawer-nav-icon"></i>
+                <span class="link-label">Categories</span>
+                <i class="ri-arrow-down-s-line chevron-arrow"></i>
+              </a>
+              <!-- Categories Dropdown Menu -->
+              <ul class="sub-menu">
+                <li><a href="products.html?cat=cricket"><i class="ri-arrow-right-s-line sub-icon"></i> Cricket</a></li>
+                <li><a href="products.html?cat=football"><i class="ri-arrow-right-s-line sub-icon"></i> Football</a></li>
+                <li><a href="products.html?cat=tennis"><i class="ri-arrow-right-s-line sub-icon"></i> Tennis</a></li>
+                <li><a href="products.html?cat=badminton"><i class="ri-arrow-right-s-line sub-icon"></i> Badminton</a></li>
+                <li><a href="products.html?cat=boxing"><i class="ri-arrow-right-s-line sub-icon"></i> Boxing</a></li>
+                <li><a href="products.html?cat=accessories"><i class="ri-arrow-right-s-line sub-icon"></i> Accessories</a></li>
+                <li><a href="products.html?cat=trophies"><i class="ri-arrow-right-s-line sub-icon"></i> Trophies</a></li>
+                <li><a href="products.html?cat=other"><i class="ri-arrow-right-s-line sub-icon"></i> Other Sports</a></li>
+              </ul>
+            </li>
+            <li class="nav-menu-item">
+              <a href="about.html" class="nav-menu-link">
+                <i class="ri-information-line drawer-nav-icon"></i>
+                <span class="link-label">About Us</span>
+              </a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="contact.html" class="nav-menu-link">
+                <i class="ri-customer-service-2-line drawer-nav-icon"></i>
+                <span class="link-label">Contact</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Drawer Footer Contact Details & Socials -->
+          <div class="drawer-footer">
+            <div class="drawer-contact-block">
+              <span class="drawer-section-heading">Customer Support</span>
+              <a href="https://wa.me/918637506933" target="_blank" rel="noopener noreferrer" class="drawer-contact-link whatsapp">
+                <i class="ri-whatsapp-fill"></i>
+                <span>+91 8637506933</span>
+              </a>
+              <a href="tel:9732800416" class="drawer-contact-link phone">
+                <i class="ri-phone-fill"></i>
+                <span>+91 9732800416 / 6294542448</span>
+              </a>
+              <a href="mailto:deltaenterp@gmail.com" class="drawer-contact-link email">
+                <i class="ri-mail-fill"></i>
+                <span>deltaenterp@gmail.com</span>
+              </a>
+            </div>
+
+            <div class="drawer-socials">
+              <span class="drawer-socials-label">Follow Us:</span>
+              <div class="social-icons-group">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle facebook" aria-label="Facebook">
+                  <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle instagram" aria-label="Instagram">
+                  <i class="ri-instagram-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Search Box Container -->
+        <div class="header-search-wrap">
+          <form class="search-box" id="site-search-form" role="search" action="products.html" method="get">
+            <span class="search-lead-icon">
+              <i class="ri-search-line"></i>
+            </span>
+            <input
+              type="search"
+              name="q"
+              id="site-search"
+              class="search-text-field"
+              placeholder="Search for sports items, equipment..."
+              aria-label="Search for sports items"
+            />
+            <button type="submit" class="search-action-btn" aria-label="Search button">
+              <i class="ri-search-line"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  
+  <main class="main-content">
+    <section class="page-hero">
+      <img class="page-hero-photo" src="assets/hero-clean-bg.jpg" alt="" width="1983" height="793">
+      <div class="page-hero-scrim" aria-hidden="true"></div>
+      <div class="header-container page-hero-copy">
+        <h1 class="page-hero-title" id="catalog-title">All Products</h1>
+        <p>Wholesale and retail sports gear, ready to filter and search.</p>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="all-products" data-catalog aria-labelledby="catalog-title">
+      <div class="header-container featured-container">
+        <div class="catalog-tools">
+          <label class="catalog-search">
+            <i class="ri-search-line" aria-hidden="true"></i>
+            <input type="search" data-catalog-search placeholder="Search products" aria-label="Search products">
+          </label>
+          <p class="catalog-count" data-catalog-count>17 products</p>
+        </div>
+        <div class="catalog-filters" role="group" aria-label="Filter by category">
+          <button type="button" class="catalog-filter is-on" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="catalog-filter" data-filter="cricket" aria-pressed="false">Cricket</button>
+          <button type="button" class="catalog-filter" data-filter="football" aria-pressed="false">Football</button>
+          <button type="button" class="catalog-filter" data-filter="tennis" aria-pressed="false">Tennis</button>
+          <button type="button" class="catalog-filter" data-filter="badminton" aria-pressed="false">Badminton</button>
+          <button type="button" class="catalog-filter" data-filter="boxing" aria-pressed="false">Boxing</button>
+          <button type="button" class="catalog-filter" data-filter="accessories" aria-pressed="false">Accessories</button>
+          <button type="button" class="catalog-filter" data-filter="trophies" aria-pressed="false">Trophies</button>
+          <button type="button" class="catalog-filter" data-filter="other" aria-pressed="false">Other Sports</button>
+        </div>
+        <p class="catalog-empty" data-catalog-empty hidden>No products match that search.</p>
+        <ul class="featured-grid">
+          <li class="product-card" data-product data-id="mrf-cricket-bat" data-category="cricket" data-name="MRF Cricket Bat">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/cricket-bat.png" alt="MRF Cricket Bat" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">MRF Cricket Bat</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹2,499</span>
+              <button type="button" class="product-cart" aria-label="Buy now: MRF Cricket Bat"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="leather-cricket-ball" data-category="cricket" data-name="Leather Cricket Ball">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/cricket-ball.png" alt="Leather Cricket Ball" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Leather Cricket Ball</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹499</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Leather Cricket Ball"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="cricket-helmet" data-category="cricket" data-name="Cricket Helmet">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/helmet.png" alt="Cricket Helmet" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Cricket Helmet</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹1,899</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Cricket Helmet"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="batting-gloves" data-category="cricket" data-name="Batting Gloves">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/batting-gloves.png" alt="Batting Gloves" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Batting Gloves</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹799</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Batting Gloves"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="cricket-stumps" data-category="cricket" data-name="Cricket Stumps Set">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/stumps.png" alt="Cricket Stumps Set" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Cricket Stumps Set</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹699</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Cricket Stumps Set"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="cosco-football" data-category="football" data-name="Cosco Football">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/football.png" alt="Cosco Football" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Cosco Football</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹899</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Cosco Football"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="football-boots" data-category="football" data-name="Football Boots">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/football-boots.png" alt="Football Boots" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Football Boots</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹1,599</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Football Boots"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="dunlop-tennis-ball" data-category="tennis" data-name="Dunlop Tennis Ball">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/tennis-ball.png" alt="Dunlop Tennis Ball" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Dunlop Tennis Ball</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹299</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Dunlop Tennis Ball"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="tennis-racket" data-category="tennis" data-name="Tennis Racket">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/categories/tennis.png" alt="Tennis Racket" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Tennis Racket</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹1,799</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Tennis Racket"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="yonex-badminton-racket" data-category="badminton" data-name="Yonex Badminton Racket">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/badminton-racket.png" alt="Yonex Badminton Racket" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Yonex Badminton Racket</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹1,999</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Yonex Badminton Racket"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="feather-shuttlecocks" data-category="badminton" data-name="Feather Shuttlecocks">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/shuttlecocks.png" alt="Feather Shuttlecocks" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Feather Shuttlecocks</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹249</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Feather Shuttlecocks"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="badminton-set" data-category="badminton" data-name="Badminton Set">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/categories/badminton.png" alt="Badminton Set" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Badminton Set</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹1,299</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Badminton Set"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="sports-backpack" data-category="accessories" data-name="Sports Backpack">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/backpack.png" alt="Sports Backpack" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Sports Backpack</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹1,499</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Sports Backpack"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="champion-trophy" data-category="trophies" data-name="Champion Trophy">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/trophy.png" alt="Champion Trophy" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Champion Trophy</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹1,299</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Champion Trophy"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="boxing-gloves" data-category="boxing" data-name="Boxing Gloves">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/boxing-gloves.png" alt="Boxing Gloves" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Boxing Gloves</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹899</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Boxing Gloves"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="basketball" data-category="other" data-name="Basketball">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/products/basketball.png" alt="Basketball" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Basketball</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹799</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Basketball"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+          <li class="product-card" data-product data-id="basketball-volleyball" data-category="other" data-name="Basketball & Volleyball">
+            <button type="button" class="product-view">
+              <span class="product-media"><img src="assets/categories/other-sports.png" alt="Basketball & Volleyball" width="1024" height="1024"><span class="product-view-tag" aria-hidden="true">View</span></span>
+              <span class="product-name">Basketball & Volleyball</span>
+            </button>
+            <div class="product-row">
+              <span class="product-price">₹1,199</span>
+              <button type="button" class="product-cart" aria-label="Buy now: Basketball & Volleyball"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+<footer class="site-footer" id="contact">
+    <div class="footer-main">
+      <div class="header-container footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Delta Sports Emporium Homepage">
+            <img src="assets/logo_white.png" alt="DELTA SPORTS EMPORIUM" width="1928" height="412">
+          </a>
+          <p class="footer-tagline">All types of sports items available here on Wholesale &amp; Retail price.</p>
+          <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social facebook" aria-label="Facebook">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social instagram" aria-label="Instagram">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-col" aria-label="Quick Links">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Our Categories">
+          <h2 class="footer-heading">Our Categories</h2>
+          <ul class="footer-links">
+            <li><a href="products.html?cat=cricket">Cricket</a></li>
+            <li><a href="products.html?cat=football">Football</a></li>
+            <li><a href="products.html?cat=tennis">Tennis</a></li>
+            <li><a href="products.html?cat=badminton">Badminton</a></li>
+            <li><a href="products.html?cat=accessories">Sports Accessories</a></li>
+            <li><a href="products.html?cat=trophies">Trophies &amp; Awards</a></li>
+            <li><a href="products.html?cat=boxing">Boxing</a></li>
+            <li><a href="products.html?cat=other">Other Sports</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col footer-contact">
+          <h2 class="footer-heading">Contact Us</h2>
+          <ul class="footer-contact-list">
+            <li>
+              <a href="https://wa.me/918637506933" target="_blank" rel="noopener noreferrer">
+                <span class="footer-contact-icon" aria-hidden="true"><i class="ri-whatsapp-fill"></i></span>
+                <span>8637506933</span>
+              </a>
+            </li>
+            <li>
+              <span class="footer-contact-icon" aria-hidden="true"><i class="ri-phone-fill"></i></span>
+              <span class="footer-phones">
+                <a href="tel:9732800416">9732800416</a>, <a href="tel:6294542448">6294542448</a>
+              </span>
+            </li>
+            <li>
+              <a href="mailto:deltaenterp@gmail.com">
+                <span class="footer-contact-icon" aria-hidden="true"><i class="ri-mail-fill"></i></span>
+                <span class="footer-mail">deltaenterp@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://maps.google.com/?q=Satish+Samanta+Marketing+Complex,+Stall+No.-3,+Mahishadal,+Purba+Medinipur+721628" target="_blank" rel="noopener noreferrer">
+                <span class="footer-contact-icon" aria-hidden="true"><i class="ri-map-pin-fill"></i></span>
+                <span>Satish Samanta Marketing Complex,<br>Stall No.-3, Mahishadal,<br>Purba Medinipur - 721628 (W.B.)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <div class="header-container footer-bar-inner">
+        <p>&copy; 2025 Delta Sports Emporium. All Rights Reserved.</p>
+        <p class="footer-legal">
+          <a href="index.html#privacy">Privacy Policy</a>
+          <span aria-hidden="true">|</span>
+          <a href="index.html#terms">Terms &amp; Conditions</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript File -->
+  <script src="script.js" defer></script>
+</body>
+</html>
